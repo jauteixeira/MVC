@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rolê Top</title>
+    <link href="img/logo.png" rel="icon" type="image/x-icon">   
+    <link href="css/style2.css" rel="stylesheet" type="text/css">
+    <link href="css/style-secon.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="flex-container">
+     <header>
+            <nav>
+                <div class="section-container">
+                    <ul>
+                        <li id="bt-mobile-menu">
+                        </li>
+                        <li><a href="index.html">MENU</a></li>
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">TIPOS DE EVENTOS</a></li>
+                        <li><a href="signup.html">CADASTRE-SE</a></li>
+                        <li><a href="login.html">LOGIN</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+<main>
+    <div class="cadastro">    
+        <form method="GET" action="index.html">
+                <div>
+                    <label for="nome">Nome Completo</label>
+                    <br />
+                    <input id="nome" type="text" maxlength="20" minlength="3" name="nome"/>
+                </div>
+    
+                <div>
+                    <label for="endereco">CPF ou CNPJ</label>
+                    <br />
+                    <input id="endereco" type="text" maxlength="20" minlength="3" name="endereco" />
+                </div>
+    
+                <div>
+                    <label for="telefone">Telefone para contato</label>
+                    <br />
+                    <input id="telefone" type="text" maxlength="20" minlength="3" name="telefone">
+                </div>
+    
+                <div>
+                    <label for="email">E-mail</label>
+                    <br />
+                    <input id="email" type="email" />
+                </div>
+    
+                <div class="double-field">
+                    <div>
+                        <label for="evento">Evento</label>
+                        <select id="evento" required>
+                            <option value="" disabled selected>Selecione</option>
+                            <option >Casamento</option>
+                            <option>Formatura</option>
+                            <option>Aniversário</option>
+                            <option>Palestra</option>
+                            <option>Boate</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="forma-de-pagamento">Forma de Pagamento</label>
+                        <select id="pagamento">
+                            <option value="" disabled selected>Selecione</option>
+                            <option>Boleto</option>
+                            <option>Cartão de Credito</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="submit" value="Finalizar!" />
+            </form>
+        </div>
+
+<footer>
+        <div class="section-container">
+           <address>
+               Avenida de Limeira, 539 - Campos Elíseos - SP
+               <br />
+               roletop@email.com.br
+               <br />
+               11 1234 6789
+           </address>
+           <a href="#">Voltar para o topo!</a>
+       </div>
+       </footer>
+       <script>
+            function toggleMobileMenu() {
+                var ul = document.querySelector("nav ul");
+                var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                var icon = document.querySelector(".icon > i");
+    
+                ul.classList.toggle("mobile-mode");
+    
+                if (icon.classList.contains("fa-bars")) {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.remove("fa");
+    
+                    icon.classList.add("fas");
+                    icon.classList.add("fa-skull");
+                } else {
+                    icon.classList.remove("fas");
+                    icon.classList.remove("fa-skull");
+    
+                    icon.classList.add("fa");
+                    icon.classList.add("fa-bars");
+                }
+    
+                for (var button of commonButtons) {
+                    button.classList.toggle("active");
+                }
+    
+            }
+            
+        </script>
+   </main>
+</body>
