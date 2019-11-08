@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\37258681825\\Documents\\McBonaldsMVC\\McBonaldsMVC.csproj": {}
+    "C:\\Users\\37258681825\\Documents\\MVC\\McBonaldsMVC\\McBonaldsMVC.csproj": {}
   },
   "projects": {
-    "C:\\Users\\37258681825\\Documents\\McBonaldsMVC\\McBonaldsMVC.csproj": {
+    "C:\\Users\\37258681825\\Documents\\MVC\\McBonaldsMVC\\McBonaldsMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\37258681825\\Documents\\McBonaldsMVC\\McBonaldsMVC.csproj",
+        "projectUniqueName": "C:\\Users\\37258681825\\Documents\\MVC\\McBonaldsMVC\\McBonaldsMVC.csproj",
         "projectName": "McBonaldsMVC",
-        "projectPath": "C:\\Users\\37258681825\\Documents\\McBonaldsMVC\\McBonaldsMVC.csproj",
+        "projectPath": "C:\\Users\\37258681825\\Documents\\MVC\\McBonaldsMVC\\McBonaldsMVC.csproj",
         "packagesPath": "C:\\Users\\37258681825\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\37258681825\\Documents\\McBonaldsMVC\\obj\\",
+        "outputPath": "C:\\Users\\37258681825\\Documents\\MVC\\McBonaldsMVC\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,0 +1,61 @@
+<main>
+    <div class="login">
+        <img src="img/usuario.png" class="usuario" width="100" height="100"
+        alt="">
+        <h1>LOGIN</h1>
+        <form>
+
+            <p>Usuario</p>
+            <input type="text" name="" placeholder="Insira seu nome de usuario">
+            <p>Senha</p>
+            <input type="password" name="" placeholder="Insira sua senha">
+            <input type="submit" name="" value="LOGIN">
+
+            <a href="#"> esqueceu sua senha ? </a> <br>
+            <a href="#"> ainda não possui uma conta ?</a>
+        </form>
+    </div>
+
+    <footer>
+        <div class="section-container">
+            <address>
+                Avenida de Limeira, 539 - Campos Elíseos - SP
+                <br />
+                roletop@email.com.br
+                <br />
+                11 1234 6789
+            </address>
+            <a href="#">Voltar para o topo!</a>
+        </div>
+    </footer>
+    
+    <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-skull");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-skull");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+        
+    </script>
+</main>
