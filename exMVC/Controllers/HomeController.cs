@@ -12,7 +12,7 @@ namespace exMVC.Controllers
     {
         public IActionResult Index()
         {
-            ViewData["NomeView"] = "Home";
+            ViewData["NomeView"] = "Login";
             return View();
         }
 

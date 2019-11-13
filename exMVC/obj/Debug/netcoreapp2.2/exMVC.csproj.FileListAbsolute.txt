@@ -58,3 +58,5 @@ C:\Users\37258681825\Documents\MVC\exMVC\obj\Debug\netcoreapp2.2\exMVC.dll
 C:\Users\37258681825\Documents\MVC\exMVC\obj\Debug\netcoreapp2.2\exMVC.pdb
 C:\Users\37258681825\Documents\MVC\exMVC\obj\Debug\netcoreapp2.2\exMVC.csproj.CopyComplete
 C:\Users\37258681825\Documents\MVC\exMVC\obj\Debug\netcoreapp2.2\Razor\Views\Cliente\Login.g.cshtml.cs
+C:\Users\37258681825\Documents\MVC\exMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Layout.g.cshtml.cs
+C:\Users\37258681825\Documents\MVC\exMVC\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_HeaderHomePage.g.cshtml.cs
