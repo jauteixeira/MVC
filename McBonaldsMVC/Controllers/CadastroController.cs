@@ -3,6 +3,7 @@ using McBonaldsMVC.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using McBonaldsMVC.Repositories;
+using System.Diagnostics;
 
 namespace McBonaldsMVC.Controllers
 {
@@ -35,6 +36,7 @@ namespace McBonaldsMVC.Controllers
             }
             catch (Exception e)
             {
+                System.Console.WriteLine(e.StackTrace);
                 return View("erro");
             }
         }

@@ -1,3 +1,5 @@
+using System;
+
 namespace McBonaldsMVC.Models
 {
     public class Pedido
