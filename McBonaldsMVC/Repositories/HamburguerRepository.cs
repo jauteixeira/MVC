@@ -17,7 +17,7 @@ namespace McBonaldsMVC.Repositories
         }
         public List<Hamburguer> ObterTodos()
         {
-            List<Hamburguer> hamburguers = new List<Hamburguer>();
+            List<Hamburguer> hamburgueres = new List<Hamburguer>();
             string[] linhas = File.ReadAllLines(PATH);
             foreach (var linha in linhas)
             {
@@ -25,8 +25,9 @@ namespace McBonaldsMVC.Repositories
                 string[] dados = linha.Split(";");
                 h.Nome = dados [0];
                 h.Preco = double.Parse(dados[1]);
-                hamburguers.Add(h);
+                hamburgueres.Add(h);
             }
+            return hamburgueres;
         }
     }
 }

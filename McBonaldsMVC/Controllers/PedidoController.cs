@@ -10,9 +10,11 @@ namespace McBonaldsMVC.Controllers
     {
 
         PedidoRepository pedidoRepository = new PedidoRepository();
+        HamburguerRepository hamburguerRepository = new HamburguerRepository();
 
         public IActionResult Index()
         {
+            var hamburgueres = hamburguerRepository.ObterTodos();
             return View();
         }
         
