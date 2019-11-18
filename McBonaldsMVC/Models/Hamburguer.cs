@@ -4,9 +4,8 @@ namespace McBonaldsMVC.Models
     {
         public Hamburguer()
         {
-
+            
         }
-
         public Hamburguer(string nome, double preco)
         {
             this.Nome = nome;
