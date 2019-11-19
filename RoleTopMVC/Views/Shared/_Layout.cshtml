@@ -1,77 +1,119 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - RoleTopMVC</title>
+﻿@{
+    var nomeView = (string) ViewData["NomeView"];
+}
 
-    <environment include="Development">
-        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-    </environment>
-    <environment exclude="Development">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
-              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
-              crossorigin="anonymous"
-              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"/>
-    </environment>
-    <link rel="stylesheet" href="~/css/site.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC&display=swap" rel="stylesheet">
+    <link href="img/logo.png" rel="icon" type="image/x-icon">
+    <title>Rolê Top</title>
+    <style type="text/css">
+        img {
+            max-width: 100%;
+            width: 600px;
+            height: 400px;
+        }
+        </style>
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">RoleTopMVC</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+        <nav>
+            <section id="botoes-do-menu">
+                <div class="section-container">
+                    <ul>
+                        <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Home" asp-action="Index" class="active">MENU</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#FAQ'>FAQ</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#sobre_a_casa'>SOBRE A CASA</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#tipos_de_eventos'>TIPOS DE EVENTOS</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href='@Url.Action("Index", "Home")#cadastro'>CADASTRE-SE</a></li>
+                    <li class="bt-common-menu"><a onclick="toggleMobileMenu()" asp-controller="Cliente" asp-action="login">LOGIN</a></li>
                     </ul>
                 </div>
-            </div>
+            </section>
         </nav>
-    </header>
-    <div class="container">
-        <partial name="_CookieConsentPartial" />
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2019 - RoleTopMVC - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        <div id="logo-area">
+            <img src="img/47778.png">
         </div>
-    </footer>
+    </header>
 
-    <environment include="Development">
-        <script src="~/lib/jquery/dist/jquery.js"></script>
-        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    </environment>
-    <environment exclude="Development">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous"
-                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
-        </script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                crossorigin="anonymous"
-                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
-        </script>
-    </environment>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+@RenderBody()
 
-    @RenderSection("Scripts", required: false)
+<main>
+    <section id="quem-somos">
+        <div class="section-container">
+            <h2>QUEM SOMOS</h2>
+            <img src="img/aperto.jpg" width="700" height="500">
+            <p>Alexandre Fukaya e Cesar Sportore são grandes empresários na área de eventos, criado em 2010 após uma viagem, a casa Rolê Top é exemplo no mercado, oferecendo um bom espaço para o seu evento.</p>
+        </div>
+    </section>
+
+    <section id="local">
+        <div class="section-container">
+            <h2>MAPA E LOCALIZAÇÃO</h2>                
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7315.798712843945!2d-46.64947723494454!3d-23.536121991808464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58423abe6eb3%3A0x9fe0fc5d7dd25ad7!2sCampos%20El%C3%ADseos%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1568113612106!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>                
+            <p>Estamos localizados na Alameda Barão de Limeira, 539 - Santa Cecilia, São Paulo - SP, 01202-001, próximo a estação do metrô Santa Cecília.</p>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <div class="section-container">
+            <h2>GALERIA</h2>
+                <img src="img/casamento.jpg" alt="Foto de um Casamento" title="Casamento">
+                <img src="img/asd.jpg" alt="Foto de jovens curtindo o salão" title="Balada Rolê Top">
+                <img src="img/palel.jpg" alt="Foto de uma Palestra" title="Palestra">
+                <img src="img/salao-para-festa-valor.jpg" alt="Foto do Ambiente1" title="Rolê Top Ambiente1">
+                <img src="img/salao-de-festas-2.jpg" alt="Foto do Ambiente2" title="Rolê Top Ambiente2">
+                <img src="img/salao_festas.jpg" alt="Foto do Ambiente3" title="Rolê Top Ambiente3">
+        </div>
+    </section>
+    <footer>
+        <div class="section-container">
+                <address>
+                        Avenida de Limeira, 539 - Campos Elíseos - SP
+                        <br />
+                        roletop@email.com.br
+                        <br />
+                        11 1234 6789
+                        </address>
+                    <a href="#">Voltar para o topo!</a>
+                </div>
+            </footer>
+            
+            <script>
+        function toggleMobileMenu() {
+            var ul = document.querySelector("nav ul");
+            var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+            var icon = document.querySelector(".icon > i");
+
+            ul.classList.toggle("mobile-mode");
+
+            if (icon.classList.contains("fa-bars")) {
+                icon.classList.remove("fa-bars");
+                icon.classList.remove("fa");
+
+                icon.classList.add("fas");
+                icon.classList.add("fa-skull");
+            } else {
+                icon.classList.remove("fas");
+                icon.classList.remove("fa-skull");
+
+                icon.classList.add("fa");
+                icon.classList.add("fa-bars");
+            }
+
+            for (var button of commonButtons) {
+                button.classList.toggle("active");
+            }
+
+        }
+        
+    </script>
+    </main>
 </body>
 </html>
