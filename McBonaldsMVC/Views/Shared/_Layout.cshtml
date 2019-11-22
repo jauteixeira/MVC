@@ -81,13 +81,17 @@
 
             ul.classList.toggle("mobile-mode");
 
-            if (icon.classList.contains("fa-bars")) {
+            if (icon.classList.contains("fa-bars")) 
+            {
                 icon.classList.remove("fa-bars");
                 icon.classList.remove("fa");
 
                 icon.classList.add("fas");
                 icon.classList.add("fa-skull");
-            } else {
+            } 
+            
+            else 
+            {
                 icon.classList.remove("fas");
                 icon.classList.remove("fa-skull");
 
@@ -95,7 +99,8 @@
                 icon.classList.add("fa-bars");
             }
 
-            for (var button of commonButtons) {
+            for (var button of commonButtons) 
+            {
                 button.classList.toggle("active");
             }
 

@@ -8,12 +8,13 @@ using McBonaldsMVC.ViewModels;
 
 namespace McBonaldsMVC.Controllers
 {
-    public class PedidoController : Controller
+    public class PedidoController : AbstractController
     {
 
         PedidoRepository pedidoRepository = new PedidoRepository();
         HamburguerRepository hamburguerRepository = new HamburguerRepository();
         ShakeRepository shakeRepository = new ShakeRepository();
+        ClienteRepository clienteRepository = new ClienteRepository();
 
         public IActionResult Index()
         {
@@ -22,6 +23,20 @@ namespace McBonaldsMVC.Controllers
             PedidoViewModels pedido = new PedidoViewModels();
             pedido.Hamburgueres = hamburgueres;
             pedido.Shakes = shakes;
+
+            var usuarioLogado = ObterUsuarioSession();
+            var nomeUsuarioLogado = ObterUsuarioNomeSession();
+            if (!string.IsNullOrEmpty(nomeUsuarioLogado))
+            {
+                pedido.NomeUsuario = nomeUsuarioLogado;
+            }
+
+            var clienteLogado = clienteRepository.ObterPor(usuarioLogado);
+            if(clienteLogado !=null)
+            {
+                pedido.Cliente = clienteLogado;
+            }
+
             return View(pedido);
         }
         
