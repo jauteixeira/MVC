@@ -17,19 +17,22 @@
 </head>
 <body>
     <header>
-            <nav>
-                <section id="botoes-do-menu">
-                    <div class="section-container">
-                        <ul>
-                            <li><a href="index.html">MENU</a></li>
-                            <li><a href= "">FAQ</a></li>
-                            <li><a href= "">SOBRE A CASA</a></li>
-                            <li><a href= "">TIPOS DE EVENTOS</a></li>
-                            <li><a href= "signup.html">CADASTRE-SE</a></li>
-                            <li><a href= "login.html">LOGIN</a></li>
-                        </ul>
-                    </div>
-                </section>
+        <nav>
+            <div class="section-container">
+                    <ul>
+                        <li id="bt-mobile-menu">
+                            <a href="javascript:void(0);" class="icon" onclick="toggleMobileMenu()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="index.html">MENU</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="">FAQ</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="">SOBRE A CASA</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="">CONTRATE-NOS</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="signup.html">CADASTRE-SE</a></li>
+                        <li class="bt-common-menu"><a onclick="toggleMobileMenu()" href="login.html">LOGIN</a></li>
+                    </ul>
+                </div>
             </nav>
         <div id="logo-area">
             <img src="img/47778.png">
@@ -78,6 +81,41 @@
                     <a href="#">Voltar para o topo!</a>
                 </div>
             </footer>
+
+            <script>
+                function toggleMobileMenu() {
+                var ul = document.querySelector("nav ul");
+                var commonButtons = document.querySelectorAll("nav .bt-common-menu");
+                var icon = document.querySelector(".icon > i");
+    
+                ul.classList.toggle("mobile-mode");
+    
+                if (icon.classList.contains("fa-bars")) 
+                {
+                    icon.classList.remove("fa-bars");
+                    icon.classList.remove("fa");
+    
+                    icon.classList.add("fas");
+                    icon.classList.add("fa-skull");
+                } 
+                
+                else 
+                {
+                    icon.classList.remove("fas");
+                    icon.classList.remove("fa-skull");
+    
+                    icon.classList.add("fa");
+                    icon.classList.add("fa-bars");
+                }
+    
+                for (var button of commonButtons) 
+                {
+                    button.classList.toggle("active");
+                }
+    
+            }
+            
+            </script>
     </main>
 </body>
 </html>

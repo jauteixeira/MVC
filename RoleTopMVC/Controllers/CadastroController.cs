@@ -7,34 +7,33 @@ namespace RoleTopMVC.Controllers
 {
     public class CadastroController : Controller
     {
-        ClienteRepository clienteRepository =  new ClienteRepository();
-
-        public IActionResult Index ()
+        [HttpGet]
+        public IActionResult Index()
         {
             return View();
         }
+
+        [HttpPost]
         public IActionResult CadastrarCliente(IFormCollection form)
         {
-            ViewData ["Action"] = "Cadastro";
+            ViewData["Action"] = "Cadastro";
 
             try
             {
                 Cliente cliente = new Cliente(
                     form["nome"],
-                    form["cpf"],
                     form["email"],
+                    form["telefone"],
                     form["senha"],
-                    DateTime.Parse(form["data-nascimento"]),
-                    form["telefone"]);
-                    clienteRepository.Inserir(cliente);
-
-                System.Console.WriteLine(form["nome"]);
+                    DateTime.Parse(form ["data-nascimento"]));
+                
                 return View("Sucesso");
             }
-            catch (Exception e)
+
+                catch(Exception e)
             {
                 System.Console.WriteLine(e.StackTrace);
-                return View("erro");
+                return View("Erro");
             }
         }
     }
