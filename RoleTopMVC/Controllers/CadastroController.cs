@@ -8,6 +8,8 @@ namespace RoleTopMVC.Controllers
     public class CadastroController : Controller
     {
         [HttpGet]
+        
+        ClienteRepository clienteRepository = new ClienteRepository();
         public IActionResult Index()
         {
             return View();
@@ -26,6 +28,8 @@ namespace RoleTopMVC.Controllers
                     form["telefone"],
                     form["senha"],
                     DateTime.Parse(form ["data-nascimento"]));
+
+                    clienteRepository.Inserir(cliente);
                 
                 return View("Sucesso");
             }
